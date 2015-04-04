@@ -7,17 +7,17 @@ X .XXXX..............................................................X
 X....................................................................X
 X..XXXXXXXXXXXXXXXXXX...........XXXXXXX.XXXXXXXXXXXXXXXXXXXX.........X
 X .X..f...X.........X...........X.................i........X.........X
-X..XXXXXXX.X.....e..X....j......X.XXXXXXXXXXXXXXXXXXXXXXXX.X.....@...X
+X..XXXXXXX.X.....e..X....j......X.XXXXXXXXXXXXXXXXXXXXXXXX.X.........X
 X..X........X.......X...........X........h.................X.........X
 X..XX.XXXXXXXXXXXXXXX...........XXXXXXXXXXXXXXXXXXXXXX.XXXXX.........X
 X....................................................................X
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.......XXXX.......XXXXXXXX
                                            X.......X..X.......X
-										   X.XXXXXXXXXXXXXXXX.X
-										   X.....X......X..X..X
-										   X....X........X.X..X
-										   X...X..XXXXXXXXXX..X
-										   X..X............X..X
-										   X.XXXXXXXXXXXX...X.X
-										   X........g.........X
-										   XXXXXXXXXXXXXXXXXXXX
+                                           X.XXXXXXXXXXXXXXXX.X
+                                           X.....X......X..X..X
+                                           X....X........X.X..X
+                                           X...X..XXXXXXXXXX..X
+                                           X..X............X..X
+                                           X.XXXXXXXXXXXX...X.X
+                                           X........g.........X
+                                           XXXXXXXXXXXXXXXXXXXX
