@@ -13,13 +13,28 @@ def dijk(src, dst, graph, adj):
 
 	while len(q) > 0:
 		_, u = heappop(q)
-		neighborhood = adj(u)
+
+		if u == dst:
+			break
+
+		neighborhood = adj(graph, u)
 
 		for neighbor in neighborhood:
-			alt = 0
+			alt = dist[u] + coordinate_distance(u, neighbor)
 			if neighbor not in dist or alt < dist[neighbor]:
+				dist[neighbor] = alt
+				prev[neighbor] = u
+				heappush(q, (alt, neighbor))
 
- 	return None	
+ 	if u == dst:
+		path = []
+		while u:
+			path.append(u)
+			u = prev[u]
+		path.reverse()
+		return path
+	else:
+		return []	
 
 def get_steps(level, cell):
 	steps = []
@@ -33,6 +48,14 @@ def get_steps(level, cell):
 
 	return steps
 
+def coordinate_distance(coord1, coord2):
+	x1 = coord1[0]
+	x2 = coord2[0]
+
+	y1 = coord1[1]
+	y2 = coord2[1]
+
+	return sqrt((x1-x2)**2+(y1-y2)**2)
 
 def test_route(filename, src_waypoint, dst_waypoint):
 	level = load_level(filename)
@@ -42,7 +65,7 @@ def test_route(filename, src_waypoint, dst_waypoint):
 
 	path = dijk(src, dst, level, get_steps)
 
-	if path is not None:
+	if len(path) is not 0:
 		show_level(level, path)
 	else:
 		print("There is no path from " + src_waypoint + " to " + dst_waypoint + ".")
