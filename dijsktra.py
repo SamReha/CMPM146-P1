@@ -5,12 +5,19 @@ from heapq import heappush, heappop
 def dijk(src, dst, graph, adj):
 	dist = {}
 	prev = {}
+	q = []
 
 	dist[src] = 0
 	prev[src] = None
+	heappush(q, (dist[src], src))
 
-	for vert in graph['spaces']:
-		print vert
+	while len(q) > 0:
+		_, u = heappop(q)
+		neighborhood = adj(u)
+
+		for neighbor in neighborhood:
+			alt = 0
+			if neighbor not in dist or alt < dist[neighbor]:
 
  	return None	
 
